@@ -14,11 +14,15 @@ class Storage: Realestate{
         products.append(model)
     }
     
-    override func changeThePrice() {
+    override func changeThePrice() -> Int{
         var newPrice = 0
         let randomPrice = Int.random(in: 1000...5000)
         newPrice =  price + randomPrice
-        
+        return newPrice
+    }
+    
+    override func printInfo() {
+        let newPrice = changeThePrice()
         var item = ""
         for i in products{
             item += i.product

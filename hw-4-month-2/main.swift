@@ -42,7 +42,7 @@ realestate.append(Garage(car: "Audi a6", basement: "нет", square: 22.46, pric
 
 
 for real in realestate{
-    real.changeThePrice()
+    real.printInfo()
 }
 
 var countApartments = 0

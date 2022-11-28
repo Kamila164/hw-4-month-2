@@ -14,17 +14,20 @@ class Apartments: Realestate{
         comfort.append(model)
     }
     
-    override func changeThePrice() {
+    override func changeThePrice() -> Int{
         var newPrice = 0
         let randomPrice = Int.random(in: 1000...5000)
         newPrice =  price + randomPrice
-        
+        return newPrice
+    }
+    
+    override func printInfo() {
+        let newPrice = changeThePrice()
         var item = ""
         for i in comfort{
             item += i.item
             item += " ,"
         }
-        
         print("\nКВАРТИРА. Площадь - \(square). Старая цена - \(price). Новая цена - \(newPrice). Адрес - \(address). Количество жильцов - \(numberOfResidents). Удобства - \(item)")
     }
 }
