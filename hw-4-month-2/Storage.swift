@@ -10,7 +10,20 @@ class Storage: Realestate{
         super .init(square: square, price: price, address: address)
     }
     
+    func appendProducts(model: Products){
+        products.append(model)
+    }
+    
     override func changeThePrice() {
-        <#code#>
+        var newPrice = 0
+        let randomPrice = Int.random(in: 1000...5000)
+        newPrice =  price + randomPrice
+        
+        var item = ""
+        for i in products{
+            item += i.product
+            item += " ,"
+        }
+        print("\nСКЛАД. Площадь - \(square). Старая цена - \(price). Новая цена - \(newPrice). Адрес - \(address). Компания - \(company). Продукты - \(item)")
     }
 }

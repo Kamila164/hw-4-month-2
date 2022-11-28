@@ -15,12 +15,16 @@ class Apartments: Realestate{
     }
     
     override func changeThePrice() {
+        var newPrice = 0
+        let randomPrice = Int.random(in: 1000...5000)
+        newPrice =  price + randomPrice
+        
         var item = ""
         for i in comfort{
             item += i.item
             item += " ,"
         }
         
-        print("\nПлощадь - \(square). Стоимость - \(price). . Адрес - \(address). Количество жильцов - \(numberOfResidents). Удобства - \(item)")
+        print("\nКВАРТИРА. Площадь - \(square). Старая цена - \(price). Новая цена - \(newPrice). Адрес - \(address). Количество жильцов - \(numberOfResidents). Удобства - \(item)")
     }
 }

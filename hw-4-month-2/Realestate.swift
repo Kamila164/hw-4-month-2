@@ -14,7 +14,8 @@ class Realestate{
     func changeThePrice(){
         var newPrice = 0
         let randomPrice = Int.random(in: 1000...5000)
-        price += randomPrice
-        print("Площадь - \(square). Стоимость - \(price). Адрес - \(address)")
+        newPrice =  price + randomPrice
+        
+        print("\nНЕДВИЖИМОСТЬ. Площадь - \(square). Старая цена - \(price). Новая цена - \(newPrice). Адрес - \(address)")
     }
 }
